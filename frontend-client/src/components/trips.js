@@ -1,20 +1,24 @@
 import React from 'react'
 
-function trips(props) {
-  return <div>
-    <h3>These are the trips from the API</h3>
-    {props.trips.map((trip) => {
-      return(
-        <div key={trip.id}>
-          <h2>{trip.title}</h2>
-          <p>{trip.description}</p>
-          <p><strong>Start Date:</strong>{trip.start_date}</p>
-          <p><strong>End Date:</strong>{trip.end_date}</p>
-          <br />
-        </div>
-      );
-    })}
-  </div>
+const trips = (props) => {  
+  console.log("Props:", props)
+  return (
+    <div>
+      <h3>These are the trips from the API</h3>
+      {props.trips.map((trip) => {
+        return(
+          <div key={trip.id}>
+            <h2>{trip.title}</h2>
+            <p>{trip.description}</p>
+            <p><strong>Start Date:</strong>{trip.start_date}</p>
+            <p><strong>End Date:</strong>{trip.end_date}</p>
+            <br />
+          </div>
+        );
+      })}
+    </div>
+  ); 
+    
 }
 
 export default trips

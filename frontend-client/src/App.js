@@ -1,31 +1,19 @@
 import './App.css';
-import axios from "axios";
-import Trips from "./components/trips";
-import { useEffect, useState } from 'react';
-
-const API_URL = "http://localhost:3001/api/v1/trips";
-
-function getAPIData() {
-  return axios.get(API_URL).then((response) => response.data);
-}
+import { Routes, Route } from 'react-router-dom';
+import Pages from './Pages';
+import Nav from './components/Nav';
 
 function App() {
-  const [trips, setTrips] = useState([]);
-
-  useEffect(() => {
-    let mounted = true;
-    getAPIData().then((items) => {
-      if (mounted) {
-        setTrips(items);
-      }
-    });
-    return () => (mounted = false);
-  }, []);
-
   return (
     <div className="App">
-      <h1>Your Trips</h1>
-      <Trips trips={trips} />
+      <Routes>
+        <Route path='/' element={<Nav />}>
+          <Route index element={<Pages.Home />} />
+          <Route path="/signup" element={<Pages.Signup />} />
+          <Route path="/login" element={<Pages.Login />} />
+          <Route path="/dashboard" element={<Pages.Dashboard />} />
+        </ Route>
+      </Routes>
     </div>
   );
 }

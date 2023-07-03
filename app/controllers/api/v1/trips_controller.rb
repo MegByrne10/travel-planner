@@ -6,7 +6,11 @@ class Api::V1::TripsController < ApplicationController
   def index
     @trips = Trip.where(user: current_user)
 
-    render json: @trips
+    serialized_trips = @trips.each do |trip|
+      TripSerializer.new(trip)
+    end
+
+    render json: { trips: serialized_trips }, status: :ok
   end
 
   # GET /trips/1
