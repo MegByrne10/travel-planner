@@ -10,7 +10,7 @@ class Api::V1::TripsController < ApplicationController
       TripSerializer.new(trip)
     end
 
-    render json: { trips: serialized_trips }, status: :ok
+    render json: serialized_trips
   end
 
   # GET /trips/1

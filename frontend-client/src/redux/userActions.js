@@ -69,11 +69,7 @@ export const loginUserToDB = async (email, password) => {
       const authHeader = r.headers.get('Authorization');
       const token = authHeader.slice(7);
       
-      console.log("Auth Header:", authHeader);
-      console.log("token:", token);
-      
       localStorage.setItem('token', token);
-      console.log("Storage:", localStorage.token)
     })
     .then(data => {
       // dispatch(setUserAction(data.user));
@@ -120,11 +116,10 @@ export const getTripsFromApi = async () => {
     }
   };
   fetch(TRIPS_URL, config)
-    .then(r => {r.json()});
-    // .then(data => {
-    //   console.log(data)
-    //   return data;
-    // });
+    .then(r => {r.json()})
+    .then(data => {
+      return data.data;
+    });
     // .then(tripsInstance => {
     //   dispatch(setTripsAction(tripsInstance));
     // });
@@ -134,5 +129,6 @@ export const getTripsFromApi = async () => {
 export default {
   createUserFromEmailAndPassword,
   loginUserToDB,
-  logoutUser
+  logoutUser,
+  getTripsFromApi
 };

@@ -9,8 +9,6 @@ const LoginForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { email, password } = formFields;
 
-  console.log(formFields);
-
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
   }
@@ -20,10 +18,6 @@ const LoginForm = () => {
 
     try {
       const response = await loginUserToDB(email, password);
-
-      console.log(response);
-
-      alert("Logged in successfully")
       resetFormFields();
     } catch(error) {
       console.log("User login encoutered an error", error);
