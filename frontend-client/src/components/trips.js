@@ -14,22 +14,19 @@ const config = {
 function Trips () {  
   const [trips, setTrips] = useState([]);
 
+  const fetchTrips = async () => {
+    const response = await axios.get(API_URL, config);
+    setTrips(response.data);
+  }
+
   useEffect(() => {
-    let mounted = true;
-    axios
-      .get(API_URL, config)
-      .then((res) => {
-        if(mounted) {
-          setTrips(res.data);
-        }
-      })
-    return () => mounted = false;
-  }, [])
+    fetchTrips();
+  }, []);
 
   const renderedTrips = trips.map((trip, i) => {
     return(
       <Trip 
-        key={i}
+        key={trip.id}
         title={trip.title} 
         description={trip.description} 
         startDate={trip.start_date} 
