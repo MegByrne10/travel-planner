@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: 'DolceVita';
+  src: local('DolceVitaHeavyBold'),
+  url('./fonts/Dolce-Vita-Heavy-Bold.ttf') format('truetype');
+  font-weight: bold;
+}
+
+.font-face-dolce-vita-bold {
+  font-family: 'DolceVita';
+}
