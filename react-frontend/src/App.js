@@ -1,9 +1,10 @@
 import { GoBell, GoBeaker } from "react-icons/go";
 import Button from "./components/ui/Button";
+import FloatingLabelInput from "./components/ui/FloatingLabelInput";
 
 function App() {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container justify-center mx-auto px-4">
       <h1 className="text-3xl font-bold underline">
         Buttons
       </h1>
@@ -40,6 +41,30 @@ function App() {
         <Button warning outline className="mx-1">Warning Outline</Button>
         <Button danger outline className="mx-1">Danger Outline</Button>
         <Button neutral outline className="mx-1">Danger Outline</Button>
+      </div>
+
+      <h1 className="mt-5 text-3xl font-bold underline">
+        Floating Label Input
+      </h1>
+      <div className="items-center">
+        <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
+          <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+            <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-nuetral-900">Example Form with Floating Inputs</h2>
+          </div>
+
+          <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+            <form className="space-y-6" action="#" method="POST">
+              <FloatingLabelInput name="first_name">First Name</FloatingLabelInput>
+              <FloatingLabelInput type="email" name="email">Email</FloatingLabelInput>
+              <FloatingLabelInput type="password" name="password">Password</FloatingLabelInput>
+              <FloatingLabelInput type="number" name="age">Age</FloatingLabelInput>
+
+              <div>
+                <Button type="submit" primary className="w-full">Submit Something</Button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </div>
   )

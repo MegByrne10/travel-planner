@@ -1,7 +1,7 @@
 import classnames from "classnames";
 import { twMerge } from "tailwind-merge";
 
-const classes = {
+const styles = {
   base: 'inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800 focus:outline-none focus:ring-2',
   baseOutline: 'bg-white border-2 font-semibold hover:text-white focus:outline-none focus:ring-2 focus:ring-offset-2',
   disabled: 'opacity-50 cursur-not-allowed',
@@ -50,32 +50,32 @@ function Button({
   disabled,
   ...rest
 }) {
-  const selectedClasses = classnames(rest.className, classes.base, {
-    [`${classes.size.default}`]: !small || !large,
-    [`${classes.size.small}`]: small,
-    [`${classes.size.large}`]: large,
-    [`${classes.varient.primary}`]: primary,
-    [`${classes.varient.secondary}`]: secondary,
-    [`${classes.varient.success}`]: success,
-    [`${classes.varient.info}`]: info,
-    [`${classes.varient.accent}`]: accent,
-    [`${classes.varient.warning}`]: warning,
-    [`${classes.varient.danger}`]: danger,
-    [`${classes.varient.neutral}`]: neutral,
-    [`${classes.pill}`]: rounded,
-    [`${classes.baseOutline}`]: outline,
-    [`${classes.varientOutline.primary}`]: outline && primary,
-    [`${classes.varientOutline.secondary}`]: outline && secondary,
-    [`${classes.varientOutline.success}`]: outline && success,
-    [`${classes.varientOutline.info}`]: outline && info,
-    [`${classes.varientOutline.accent}`]: outline && accent,
-    [`${classes.varientOutline.warning}`]: outline && warning,
-    [`${classes.varientOutline.danger}`]: outline && danger,
-    [`${classes.varientOutline.neutral}`]: outline && neutral,
-    [`${classes.disabled}`]: disabled
+  const classes = classnames(rest.className, styles.base, {
+    [`${styles.size.default}`]: !small || !large,
+    [`${styles.size.small}`]: small,
+    [`${styles.size.large}`]: large,
+    [`${styles.varient.primary}`]: primary,
+    [`${styles.varient.secondary}`]: secondary,
+    [`${styles.varient.success}`]: success,
+    [`${styles.varient.info}`]: info,
+    [`${styles.varient.accent}`]: accent,
+    [`${styles.varient.warning}`]: warning,
+    [`${styles.varient.danger}`]: danger,
+    [`${styles.varient.neutral}`]: neutral,
+    [`${styles.pill}`]: rounded,
+    [`${styles.baseOutline}`]: outline,
+    [`${styles.varientOutline.primary}`]: outline && primary,
+    [`${styles.varientOutline.secondary}`]: outline && secondary,
+    [`${styles.varientOutline.success}`]: outline && success,
+    [`${styles.varientOutline.info}`]: outline && info,
+    [`${styles.varientOutline.accent}`]: outline && accent,
+    [`${styles.varientOutline.warning}`]: outline && warning,
+    [`${styles.varientOutline.danger}`]: outline && danger,
+    [`${styles.varientOutline.neutral}`]: outline && neutral,
+    [`${styles.disabled}`]: disabled
   });
 
-  const mergedClasses = twMerge(selectedClasses)
+  const mergedClasses = twMerge(classes)
 
   return (
     <button {...rest} disabled={disabled} className={mergedClasses}>
