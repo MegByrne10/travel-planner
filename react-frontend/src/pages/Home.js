@@ -2,7 +2,9 @@ import React from 'react'
 
 function Home() {
   return (
-    <h1 className='font-face-dolce-vita-bold text-5xl'>VoClique Home</h1>
+    <div className='bg-atlanticNavy-500'>
+      <h1 className='p-5 font-face-dolce-vita-bold text-white text-5xl'>VoClique</h1>
+    </div>
   )
 }
 

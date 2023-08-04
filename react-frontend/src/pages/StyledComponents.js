@@ -41,15 +41,9 @@ function StyledComponents() {
           Primary Button
         </Button>
         <Button secondary rounded className="mx-1">Secondary Rounded</Button>
-        <Button success className="mx-1">
-          Success
-          <GoBeaker />
-        </Button>
-        <Button info className="mx-1">
-          Info
-        </Button>
         <Button accent className="mx-1">
           Accent
+          <GoBeaker />
         </Button>
         <Button warning className="mx-1">
           Warning
@@ -57,18 +51,14 @@ function StyledComponents() {
         </Button>
         <Button danger className="mx-1">Danger</Button>
         <Button danger disabled className="mx-1">Danger Disabled</Button>
-        <Button neutral className="mx-1">Danger</Button>
       </div>
       <div>
         <Button primary outline className="mx-1">Primary Outline</Button>
         <Button secondary outline className="mx-1">Secondary Outline</Button>
-        <Button success outline className="mx-1">Success Outline</Button>
-        <Button success outline disabled className="mx-1">Success Outline Disabled</Button>
-        <Button info outline rounded className="mx-1">Info Outline Rounded</Button>
         <Button accent outline className="mx-1">Accent Outline</Button>
+        <Button accent outline disabled className="mx-1">Disabled</Button>
         <Button warning outline className="mx-1">Warning Outline</Button>
         <Button danger outline className="mx-1">Danger Outline</Button>
-        <Button neutral outline className="mx-1">Danger Outline</Button>
       </div>
 
       <h1 className="mt-5 text-3xl font-bold underline">
