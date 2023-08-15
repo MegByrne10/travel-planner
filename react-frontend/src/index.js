@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from "react-router-dom";
-import './fonts/Dolce-Vita-Heavy-Bold.ttf';
+import './assests/fonts/Dolce-Vita-Heavy-Bold.ttf';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';

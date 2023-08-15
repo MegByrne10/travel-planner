@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Button from "../ui/Button";
-import FloatingLabelInput from "../ui/FloatingLabelInput";
+import Button from "../../ui/Button";
+import FloatingLabelInput from "../../ui/FloatingLabelInput";
 
 function LoginForm() {
   const[firstName, setFristName] = useState('');
@@ -10,7 +10,9 @@ function LoginForm() {
   return (
     <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
       <div class="sm:mx-auto sm:w-full sm:max-w-sm">
-        <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-nuetral-900">Sign in to your account</h2>
+        <h2 class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-nuetral-900">
+          Sign Up Here!!
+        </h2>
       </div>
 
       <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">

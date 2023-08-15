@@ -21,7 +21,7 @@ const styles = {
   varientOutline: {
     primary: 'border-jadeMountain-200 text-jadeMountain-500 hover:bg-jadeMountain-500 hover:border-jadeMountain-500 focus:ring-jadeMountain-400',
     secondary: 'border-fuchsiaFever-200 text-fuchsiaFever-500 hover:bg-fuchsiaFever-500 hover:border-fuchsiaFever-500 focus:ring-fuchsiaFever-400',
-    accent: 'border-alexisBlue-200 text-alexisBlue-700 hover:bg-alexisBlue-500 hover:border-alexisBlue-500 focus:ring-alexisBlue-400',
+    accent: 'border-alexisBlue-200  text-alexisBlue-600 dark:text-alexisBlue-100 hover:bg-alexisBlue-500 hover:border-alexisBlue-500 focus:ring-alexisBlue-400',
     warning: 'border-amber-200 text-amber-500 hover:bg-amber-500 hover:border-amber-500 focus:ring-amber-400',
     danger: 'border-danger-200 text-danger-500 hover:bg-danger-500 hover:border-danger-500 focus:ring-danger-400',
   }
